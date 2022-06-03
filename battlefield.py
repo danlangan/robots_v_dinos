@@ -16,15 +16,15 @@ class Battlefield:
         print("ROBOTS VS DINOSAURS - WHAT WE'VE ALL BEEN WAITING FOR")
 
     def battle(self):
-        while int(self.herd.dino_total_health) > 0 and int(self.fleet.robot_total_health) > 0:
-            dice_roll = random.ranint(1, 10)
+        while int(self.herd.herd_health) > 0 and int(self.fleet.fleet_health) > 0:
+            dice_roll = random.randint(1, 10)
             if dice_roll % 2 == 0:
                 self.dino_turn()
                 if len(self.fleet.robots):
                     self.robo_turn()
             else:
                 self.robo_turn()
-                if int(self.herd.dino_total_health) > 0:
+                if int(self.herd.herd_health) > 0:
                     self.dino_turn()
 
     def dino_turn(self):

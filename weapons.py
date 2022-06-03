@@ -1,11 +1,13 @@
 import random
 
 class Weapon:
-    def __init__(self, weapon_type, weapon_damage):
-        self.weapon_type = weapon_type
-        self.weapon_damage = weapon_damage
+    def __init__(self):
+        pass
     
-    def __str__(self) -> str:
+    def __str__(self, weapon_type) -> str:
+        self.weapon_type = ['sword','spear','lazers']
+        self.weapon_damage = [30, 30, 35]
+        
         print(f"Using a {self.random.weapon_type}")
         if str == 'sword':
             Weapon("Sword", {random.choice.weapon_damage})
@@ -14,5 +16,5 @@ class Weapon:
         else:
             Weapon("Spear", {random.choice.weapon_damage})
 
-    weapon_type = ['sword','spear','lazers']
-    weapon_damage = [30, 30, 35]
+        self.weapon_type = ['sword','spear','lazers']
+        self.weapon_damage = [30, 30, 35]
